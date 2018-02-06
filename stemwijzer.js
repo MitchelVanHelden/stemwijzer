@@ -1,5 +1,5 @@
 document.getElementById('vraag').innerHTML = 'Test uw politieke voorkeur aan de hand van 30 stellingen';
-document.getElementById('option1').innerHTML = 'start';
+document.getElementById('option5').innerHTML = 'start';
 
 
 function vraag1(){
@@ -7,7 +7,7 @@ function vraag1(){
 
 	var opt1 = document.getElementById('option1');
 	opt1.innerHTML = 'Eens';
-	opt1.setAttribute("onClick", "javascript:vraag2();");
+	opt1.setAttribute("onClick", "javascript:");
 
 	var opt2 = document.getElementById('option2');
 	opt2.innerHTML = 'Geen van beide';
@@ -19,17 +19,20 @@ function vraag1(){
 
 	var opt4 = document.getElementById('option4');
 	opt4.innerHTML = 'Sla deze vraag over';
-	opt4.setAttribute("onClick", "javascript:");
+	opt4.setAttribute("onClick", "javascript:vraag2();");
 
 	var back = document.getElementById('back');
-		
+	back.innerHTML = 'back';
+	back.setAttribute("onClick", "");
+
 	document.getElementById('title').innerHTML = subjects[0].title;
 	document.getElementById('vraag').innerHTML = subjects[0].statement ;
 	document.getElementById('option2').style.display = 'inline-block';
 	document.getElementById('option3').style.display = 'inline-block';
 	document.getElementById('option4').style.display = 'inline-block';
-	document.getElementById('back').style.display = 'none';
-
+	document.getElementById('option1').style.display = 'inline-block';
+	document.getElementById('back').style.display = 'inline-block';
+	document.getElementById('option5').style.display = 'none';
 }
 
 function vraag2(){
@@ -49,7 +52,7 @@ function vraag2(){
 
 	var opt4 = document.getElementById('option4');
 	opt4.innerHTML = 'Sla deze vraag over';
-	opt4.setAttribute("onClick", "javascript:");
+	opt4.setAttribute("onClick", "javascript:vraag3();");
 
 	var back = document.getElementById('back');
 	back.innerHTML = 'back';
@@ -62,7 +65,9 @@ function vraag2(){
 	document.getElementById('option2').style.display = 'inline-block';
 	document.getElementById('option3').style.display = 'inline-block';
 	document.getElementById('option4').style.display = 'inline-block';
+	document.getElementById('option1').style.display = 'inline-block';
 	document.getElementById('back').style.display = 'inline-block';
+	document.getElementById('option5').style.display = 'none';
 
 }
 
@@ -83,7 +88,7 @@ function vraag3(){
 
 	var opt4 = document.getElementById('option4');
 	opt4.innerHTML = 'Sla deze vraag over';
-	opt4.setAttribute("onClick", "javascript:");
+	opt4.setAttribute("onClick", "javascript:vraag4();");
 
 	var back = document.getElementById('back');
 	back.innerHTML = 'back';
@@ -95,9 +100,15 @@ function vraag3(){
 	document.getElementById('vraag').innerHTML = subjects[2].statement ;
 	document.getElementById('option2').style.display = 'inline-block';
 	document.getElementById('option3').style.display = 'inline-block';
+	document.getElementById('option1').style.display = 'inline-block';
 	document.getElementById('option4').style.display = 'inline-block';
 	document.getElementById('back').style.display = 'inline-block';
+	document.getElementById('option5').style.display = 'none';
 
 }
+function vraag4(){
+	console.log("vraag4()");
 
+
+}
 
