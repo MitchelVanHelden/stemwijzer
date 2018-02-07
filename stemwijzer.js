@@ -131,7 +131,7 @@ var next = function(event){
 	statement.innerHTML = subjects[nr].statement;
 }
 
-var prev = function(event2){
+var prev = function(event){
 	nr--;
 	subject.innerHTML = subjects[nr].title;
 	statement.innerHTML = subjects[nr].statement;
