@@ -1,5 +1,7 @@
-document.getElementById('vraag').innerHTML = 'Test uw politieke voorkeur aan de hand van 30 stellingen';
+/**document.getElementById('vraag').innerHTML = 'Test uw politieke voorkeur aan de hand van 30 stellingen';
 document.getElementById('option5').innerHTML = 'start';
+
+var option1 = 'eens'
 
 
 function vraag1(){
@@ -110,5 +112,31 @@ function vraag4(){
 	console.log("vraag4()");
 
 
+} **/
+
+var nr = 0;
+
+var subject = document.getElementById('subject');
+var statement = document.getElementById('statement');
+var next = document.getElementById('skip');
+var back = document.getElementById('back');
+//console.dir(subject);
+
+subject.innerHTML = subjects[nr].title;
+statement.innerHTML = subjects[nr].statement;
+
+var next = function(event){
+	nr++;
+	subject.innerHTML = subjects[nr].title;
+	statement.innerHTML = subjects[nr].statement;
 }
+
+var prev = function(event2){
+	nr--;
+	subject.innerHTML = subjects[nr].title;
+	statement.innerHTML = subjects[nr].statement;
+}
+
+skip.onclick = next;
+back.oncllck = prev;
 

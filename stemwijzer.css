@@ -1,3 +1,16 @@
-#option1, #option2, #option3, #option4, #back{
-	display: none;
+body{
+	background-image: url(img/stemwijzer.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+main{
+	margin: 0 auto;
+	width: 50%;
+	background-color: white;
+	opacity: 0.8;
+	padding: 50px;
+}
+section{
+	margin-bottom: 20px;
 }
