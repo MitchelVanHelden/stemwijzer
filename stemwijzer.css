@@ -10,7 +10,25 @@ main{
 	background-color: white;
 	opacity: 0.8;
 	padding: 50px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 150px;
 }
 section{
 	margin-bottom: 20px;
+}
+button{
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+}
+button:hover{
+
+	cursor: pointer;
+	background-color: #ff5050;
 }
