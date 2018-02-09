@@ -118,8 +118,6 @@ var nr = 0;
 
 var subject = document.getElementById('subject');
 var statement = document.getElementById('statement');
-var next = document.getElementById('skip');
-var back = document.getElementById('back');
 //console.dir(subject);
 
 subject.innerHTML = subjects[nr].title;
@@ -137,6 +135,14 @@ var prev = function(event){
 	statement.innerHTML = subjects[nr].statement;
 }
 
-skip.onclick = next;
-back.oncllck = prev;
+var agree = function(event){
+	nr++;
+	subject.innerHTML = subjects[nr].title;
+	statement.innerHTML = subjects[nr].statement;
+}
+var disagree = function(event){
+	nr++;
+	subject.innerHTML = subjects[nr].title;
+	statement.innerHTML = subjects[nr].statement;
+}
 
