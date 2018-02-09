@@ -118,7 +118,7 @@ var nr = 0;
 
 var subject = document.getElementById('subject');
 var statement = document.getElementById('statement');
-//console.dir(subject);
+
 
 subject.innerHTML = subjects[nr].title;
 statement.innerHTML = subjects[nr].statement;
