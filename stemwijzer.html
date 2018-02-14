@@ -6,18 +6,21 @@
 	<link rel="stylesheet" type="text/css" href="stemwijzer.css" />
 </head>
 <body>
+	
+	<button class="button" id="start">Start</button>
 
-	<main>
-		<button id="back" onclick="prev()">terug</button>
+	<main id="main">
+		<button id="prev">terug</button>
+		
 
 		<h1 id="subject">subject</h1>
 		<section id="statement">statement</section>
 
 		<nav>
-			<button id="agree" onclick="agree()">eens</button>
-			<button id="none">geen van beide</button>
-			<button id="disagree" onclick="disagree()">oneens</button>
-			<button id="skip" onclick="next()">sla deze vraag over</button>
+			<button id="agree">eens</button>
+			<button id="midway">geen van beide</button>
+			<button id="disagree">oneens</button>
+			<button id="next">sla deze vraag over</button>
 		</nav>
 
 </main>
