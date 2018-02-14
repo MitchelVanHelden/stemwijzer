@@ -116,6 +116,7 @@ function vraag4(){
 
 var nr = 0;
 
+
 var scores = {
     'PVV': 0,
     'SP': 0,
@@ -165,17 +166,19 @@ main.style.display = "block";
 
  	
  var start = document.getElementById('start');
- nr++;
  start.innerHTML = 'start';
  
 
 }
 
 document.getElementById("prev").addEventListener("click", function(){
+	if(nr <! 0) {
+	location.reload(); 
+	}
     nr--;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
-    scores.splice();
+
 });
 document.getElementById("next").addEventListener("click", function(){
     nr++
