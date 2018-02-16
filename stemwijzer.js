@@ -160,15 +160,12 @@ startBtn.addEventListener("click", start);
 function start() {
  console.log("start()");
 
-var start = document.getElementById('start').style.display = "none";
-main.style.display = "block";
-
-
+	var start = document.getElementById('start').style.display = "none";
+	main.style.display = "block";
  	
- var start = document.getElementById('start');
- start.innerHTML = 'start';
+ 	var start = document.getElementById('start');
+ 	start.innerHTML = 'start';
  
-
 }
 
 document.getElementById("prev").addEventListener("click", function(){
