@@ -116,6 +116,7 @@ function vraag4(){
 
 
 var nr = 0;
+choices = []
 
 var scores = {
     'PVV': 0,
@@ -188,6 +189,7 @@ document.getElementById("next").addEventListener("click", function(){
 
 document.getElementById("agree").addEventListener("click", result); 
 document.getElementById("agree").addEventListener("click", function(){
+	
     console.log(nr);
     nr++;
     subject.innerHTML = subjects[nr].title;
