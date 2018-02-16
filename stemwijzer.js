@@ -172,6 +172,9 @@ function start() {
 }
 
 document.getElementById("prev").addEventListener("click", function(){
+	if(nr <! 0) {
+			location.reload();				
+		}
     nr--;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;

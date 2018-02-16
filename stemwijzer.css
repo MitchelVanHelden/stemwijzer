@@ -25,13 +25,13 @@ button{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 5px;
-	background-color: red;
+	background-color: black;
 	color: white;
 }
 button:hover{
 
 	cursor: pointer;
-	background-color: #ff5050;
+	background-color: #018aa9;
 }
 h1{
 	color: #01B4DC;
