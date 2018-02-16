@@ -114,15 +114,15 @@ function vraag4(){
 
 } **/
 
-var nr = 0;
 
+var nr = 0;
 
 var scores = {
     'PVV': 0,
     'SP': 0,
     'D66': 0,
     'GroenLinks': 0,
-    'Partij voor de Dieren"': 0,
+    'Partij voor de Dieren': 0,
     '50Plus': 0,
     'VNL': 0,
     'Nieuwe Wegen': 0,
@@ -131,7 +131,7 @@ var scores = {
     'Vrijzinnige Partij': 0,
     'Piratenpartij': 0,
     'Libertarische Partij': 0,
-    'Lokaal in de kamer': 0,
+    'Lokaal in de Kamer': 0,
     'VVD': 0,
     'PvdA': 0,
     'CDA': 0,
@@ -145,14 +145,16 @@ var scores = {
 var startBtn = document.getElementById('start');
 var subject = document.getElementById('subject');
 var statement = document.getElementById('statement');
-var prevBtn = document.getElementById("prev")
 var nxtBtn = document.getElementById("next");
 var agrBtn = document.getElementById("agree");
 var disBtn = document.getElementById("disagree");
 var midBtn = document.getElementById("midway");
+var prevBtn = document.getElementById("prev");
+var aside = document.getElementById("aside")
 
 subject.innerHTML = subjects[nr].title;
 statement.innerHTML = subjects[nr].statement;
+
 
 
 startBtn.addEventListener("click", start);
@@ -162,28 +164,28 @@ function start() {
 
 	var start = document.getElementById('start').style.display = "none";
 	main.style.display = "block";
- 	
+ 	var aside = document.getElementById('aside').style.display = "none";
+
  	var start = document.getElementById('start');
  	start.innerHTML = 'start';
  
 }
 
 document.getElementById("prev").addEventListener("click", function(){
-	if(nr <! 0) {
-	location.reload(); 
-	}
     nr--;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
-
 });
+
 document.getElementById("next").addEventListener("click", function(){
-    nr++
+    nr++;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement
 });
 
+document.getElementById("agree").addEventListener("click", result); 
 document.getElementById("agree").addEventListener("click", function(){
+    console.log(nr);
     nr++;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
@@ -196,7 +198,7 @@ document.getElementById("agree").addEventListener("click", function(){
 });
 
 document.getElementById("disagree").addEventListener("click", function(){
-    nr++
+    nr++;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
     subjects[nr].parties.forEach(function(party){
@@ -208,7 +210,7 @@ document.getElementById("disagree").addEventListener("click", function(){
      });
 
 document.getElementById("midway").addEventListener("click", function(){
-    nr++
+    nr++;
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
 
@@ -219,3 +221,10 @@ document.getElementById("midway").addEventListener("click", function(){
     });
     console.log(scores);
 });
+
+function result(){
+    if (nr === 5){
+        document.getElementById("result").innerHTML = scores;
+        }
+
+}
