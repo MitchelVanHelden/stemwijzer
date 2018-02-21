@@ -118,7 +118,7 @@ function vraag4(){
 var nr = 0;
 choices = []
 
-var punten = [
+var scores = [
 	{name: "VVD", points: 0},
 	{name: "CDA", points: 0},
 	{name: "PVV", points: 0},
@@ -186,6 +186,7 @@ document.getElementById("prev").addEventListener("click", function(){
 	var agrBtn = document.getElementById('agree').style.display = "inline-block";
 	var disBtn = document.getElementById('disagree').style.display = "inline-block";
 	var midBtn = document.getElementById('midway').style.display = "inline-block";
+	var result = document.getElementById('result').style.display = "none";
 
 });
 
@@ -250,17 +251,24 @@ document.getElementById("midway").addEventListener("click", function(){
 });
 
 function results(){
-	subject.innerHTML = "je resultaten zijn";
-	var partyResultsHtml = "";
 
+	subject.innerHTML = "je resultaten zijn";
 	statement.innerHTML = "";
 
-
-
+	var result = document.getElementById('result').style.display = "block";
 	var nxtBtn = document.getElementById('next').style.display = "none";
 	var agrBtn = document.getElementById('agree').style.display = "none";
 	var disBtn = document.getElementById('disagree').style.display = "none";
 	var midBtn = document.getElementById('midway').style.display = "none";
+
+	text = "<ul>";
+	for (i = 0; i < scores.length; i++) {
+    text += "<li>" + scores[i].name + " : " + scores[i].points + "</li>";
+	}
+	text += "</ul>";
+	document.getElementById("result").innerHTML = text;
+
+	
 
 
 
