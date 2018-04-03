@@ -213,6 +213,14 @@ document.getElementById("agree").addEventListener("click", function(){
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
 
+ var positions = subjects[nr].parties;
+    for (i = 0; i < scores.length; i++) { 
+    	
+   		if (positions[i].position == "pro") {
+   			scores[i].points++
+   		}
+} 
+
 
     
 	nr++;
@@ -229,6 +237,13 @@ document.getElementById("disagree").addEventListener("click", function(){
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
 
+         var positions = subjects[nr].parties;
+    for (i = 0; i < scores.length; i++) { 
+    	
+   		if (positions[i].position == "contra") {
+   			scores[i].points++
+   		}
+} 
 	
 	nr++;
 	if (nr == subjects.length) {
@@ -242,6 +257,13 @@ document.getElementById("midway").addEventListener("click", function(){
     console.log(choices, nr);
     subject.innerHTML = subjects[nr].title;
     statement.innerHTML = subjects[nr].statement;
+
+     var positions = subjects[nr].parties;
+    for (i = 0; i < scores.length; i++) { 
+   		if (positions[i].position == "ambivalent") {
+   			scores[i].points++
+   		}
+} 
 
 	
 	nr++;
